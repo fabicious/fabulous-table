@@ -1,17 +1,19 @@
 {
   "name": "fabulous-table",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Table with full support of components for Ember",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "table",
+    "component"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "Fabian Helpenstein",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/badmacstone/fabulous-table",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
