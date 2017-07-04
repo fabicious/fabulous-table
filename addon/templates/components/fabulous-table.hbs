@@ -13,7 +13,7 @@
 </div>
 
 {{#each sortedModel as |item|}}
-    <div class="fabulous-row row">
+    <div class="fabulous-row row" {{action 'rowClicked' item}}>
         {{yield item}}
     </div>
 {{/each}}

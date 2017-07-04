@@ -67,6 +67,17 @@ export default Ember.Component.extend({
     
     actions: {
         /**
+         * Triggers action for clicked row
+         *
+         * @param {Object} item Item of row
+         *
+         * @return {undefined}
+         */
+        rowClicked(item) {
+            this.sendAction('rowAction', item);
+        },
+        
+        /**
          * Change order field or order direction
          *
          * @param {String} orderPath Field path by which will be sorted.
@@ -79,6 +90,7 @@ export default Ember.Component.extend({
             }
             
             let sort = orderPath;
+            
             let direction = 'asc';
             
             if (sort == this.get('orderBy') && this.get('orderDirection') != 'desc') {
