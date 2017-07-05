@@ -7,7 +7,7 @@ this component.
 
 ## Installation
 
-* `npm install ember-cli-fabulous-table`
+* `npm install fabulous-table`
 
 ## Usage
 
