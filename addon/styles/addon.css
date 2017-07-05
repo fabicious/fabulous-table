@@ -1,0 +1,43 @@
+.fabulous-table .fabulous-header {
+  display: inline-block;
+  border-bottom: 2px solid #818a91;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.fabulous-table .fabulous-header .sortable {
+  cursor: pointer;
+}
+
+.fabulous-table .fabulous-table .label {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  padding-right: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.fabulous-table .fabulous-header .label .icon {
+  position: absolute;
+  top: 4px;
+  right: 0;
+}
+
+.fabulous-table .fabulous-row {
+  min-height: 56px;
+  padding: 20px 0;
+  cursor: pointer;
+  border-bottom: 1px solid #eceeef;
+  transition: box-shadow .2s;
+  transition-timing-function: ease-in;
+}
+
+.fabulous-table .fabulous-row:hover {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .25);
+}
+
+.fabulous-table .fabulous-cell {
+  display: inline-block;
+  font-size: 14px;
+}

@@ -1,1 +1,1 @@
-export { default } from 'fabulous-table/components/fabulous-table';
+export { default } from 'fabulous-table/components/fabulous-cell';
