@@ -1,19 +1,23 @@
-<tr class="fabulous-headers row">
-    {{#each headers as |header|}}
-        <th class="fabulous-header {{header.headerClass}} {{if header.orderPath 'sortable' '' }}" {{action 'orderBy' header.orderPath}}>
-            <span class="label">
-                {{header.label}}
+<thead class="fabulous-headers">
+    <tr>
+        {{#each headers as |header|}}
+            <th class="fabulous-header {{if header.orderPath 'sortable' '' }}" {{action 'orderBy' header.orderPath}}>
+                <span class="label">
+                    {{header.label}}
 
-                {{#if (eq orderBy header.orderPath)}}
-                    <i class="icon ion-ios-arrow-{{if (eq orderDirection 'asc') 'down' 'up'}}"></i>
-                {{/if}}
-            </span>
-        </th>
-    {{/each}}
-</tr>
-
-{{#each sortedModel as |item|}}
-    <tr class="fabulous-row row" {{action 'rowClicked' item}}>
-        {{yield item}}
+                    {{#if (eq orderBy header.orderPath)}}
+                        <i class="icon ion-ios-arrow-{{if (eq orderDirection 'asc') 'down' 'up'}}"></i>
+                    {{/if}}
+                </span>
+            </th>
+        {{/each}}
     </tr>
-{{/each}}
+</thead>
+
+<tbody>
+    {{#each sortedModel as |item|}}
+        <tr class="fabulous-row" {{action 'rowClicked' item}}>
+            {{yield item}}
+        </tr>
+    {{/each}}
+</tbody>

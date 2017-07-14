@@ -1,16 +1,16 @@
 {{#fabulous-table headers=(array
-        (hash label='Surname' headerClass='col-5' orderPath='firstname')
-        (hash label='Firstname' headerClass='col-5' orderPath='surname')
+        (hash label='Surname' orderPath='firstname')
+        (hash label='Firstname' orderPath='surname')
 ) orderBy='firstname'
   orderDirection='asc'
   changedOrder=(action 'findUsers')
   modelName='user'
   rowAction=(action 'showUserName')
   model=users as |item|}}
-    {{#fabulous-cell cellClass='col-5'}}
+    {{#fabulous-cell}}
         {{item.firstname}}
     {{/fabulous-cell}}
-    {{#fabulous-cell cellClass='col-5'}}
+    {{#fabulous-cell}}
         {{item.surname}}
     {{/fabulous-cell}}
 {{/fabulous-table}}
