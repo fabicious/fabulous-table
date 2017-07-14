@@ -15,7 +15,9 @@ export default Ember.Component.extend({
     }),
     
     didRender() {
-        this.bindScrollEvent();
+        if (this.get('scrollSelector')) {
+            this.bindScrollEvent();
+        }
     },
     
     /**
