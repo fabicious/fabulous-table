@@ -1,6 +1,6 @@
-<div class="fabulous-headers row">
+<tr class="fabulous-headers row">
     {{#each headers as |header|}}
-        <div class="fabulous-header {{header.headerClass}} {{if header.orderPath 'sortable' '' }}" {{action 'orderBy' header.orderPath}}>
+        <th class="fabulous-header {{header.headerClass}} {{if header.orderPath 'sortable' '' }}" {{action 'orderBy' header.orderPath}}>
             <span class="label">
                 {{header.label}}
 
@@ -8,12 +8,12 @@
                     <i class="icon ion-ios-arrow-{{if (eq orderDirection 'asc') 'down' 'up'}}"></i>
                 {{/if}}
             </span>
-        </div>
+        </th>
     {{/each}}
-</div>
+</tr>
 
 {{#each sortedModel as |item|}}
-    <div class="fabulous-row row" {{action 'rowClicked' item}}>
+    <tr class="fabulous-row row" {{action 'rowClicked' item}}>
         {{yield item}}
-    </div>
+    </tr>
 {{/each}}

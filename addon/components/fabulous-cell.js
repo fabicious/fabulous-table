@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-    tagName: 'span',
+    tagName: 'td',
     classNames: 'fabulous-cell',
     classNameBindings: ['cellClass']
 });

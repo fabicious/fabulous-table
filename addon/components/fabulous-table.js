@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
     classNames: 'fabulous-table',
+    tagName: 'table',
     
     isLoading: false,
     offset: 0,
