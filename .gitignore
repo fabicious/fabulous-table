@@ -1,2 +1,5 @@
 *.idea
 /node_modules
+yarn.lock
+/tmp
+/tests/dummy/node_modules
