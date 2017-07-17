@@ -2,5 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
     tagName: 'td',
-    classNames: 'fabulous-cell'
+    classNames: 'fabulous-cell',
+    classNameBindings: ['cellClass']
 });

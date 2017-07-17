@@ -1,7 +1,7 @@
 <thead class="fabulous-headers">
     <tr>
         {{#each headers as |header|}}
-            <th class="fabulous-header {{if header.orderPath 'sortable' '' }}" {{action 'orderBy' header.orderPath}}>
+            <th class="fabulous-header {{header.headerClass}} {{if header.orderPath 'sortable' '' }}" {{action 'orderBy' header.orderPath}}>
                 <span class="label">
                     {{header.label}}
 
