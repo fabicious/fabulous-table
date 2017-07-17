@@ -1,4 +1,6 @@
 {
   "name": "fabulous-table",
-  "dependencies": {}
+  "dependencies": {
+    "ionicons": "^2.0.1"
+  }
 }

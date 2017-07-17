@@ -1,5 +1,6 @@
 *.idea
 /node_modules
+/bower_components
 yarn.lock
 /tmp
 /tests/dummy/node_modules
