@@ -27,8 +27,22 @@ export default Ember.Controller.extend({
     ],
     
     actions: {
-        findUsers() {
-            return this.get('users');
+        findUsers(modelName, options, sortingDone) {
+            let reverse = options.sort.indexOf('-') == 0;
+            let sortKey = reverse ? options.sort.substr(1) : options.sort;
+            let sortedUsers = this.get('users').sort((a, b) => {
+                if (a[sortKey] > b[sortKey]) {
+                    return reverse ? -1 : 1;
+                } else if (a[sortKey] < b[sortKey]) {
+                    return reverse ? 1 : -1;
+                }
+    
+                return 0;
+            });
+            
+            this.set('users', sortedUsers);
+            
+            sortingDone(options.sort);
         },
     
         showUserName(user) {
