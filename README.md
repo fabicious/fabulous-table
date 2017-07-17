@@ -49,7 +49,6 @@ amount is fetched if you scrolled to bottom.
 * `cellClass` adds a CSS class to each cell of this column.
 
 As you can see the headers are separated from the cells. You can use a different `orderPath` as you use in the cell.
- 
-The table currently doesn't provide any table-ish layout. The example used bootstrap classes but you can use whatever
-you want. The plan for the future is to provide a default layout so you don't need to take care of this (still you can
-if you want to).
+
+The table provides the normal table layout (it uses ``table`` tags inside) but you can add layout classes like bootstrap
+or whatever you are using.
