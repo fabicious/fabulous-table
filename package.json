@@ -1,6 +1,6 @@
 {
   "name": "fabulous-table",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Table with full support of components for Ember",
   "keywords": [
     "ember-addon",
