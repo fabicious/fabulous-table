@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-    classNameBindings: ['baseClass', 'fixedClass'],
-    baseClass: 'fabulous-table',
+    classNames: 'fabulous-table',
+    classNameBindings: ['fixedClass'],
     tagName: 'div',
     
     fixedClass: Ember.computed('fixedHeader', function() {

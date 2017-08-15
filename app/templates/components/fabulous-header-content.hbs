@@ -1,7 +1,5 @@
 <span class="label">
     {{header.label}}
 
-    {{#if (eq orderBy header.orderPath)}}
-        <i class="icon ion-ios-arrow-{{if (eq orderDirection 'asc') 'down' 'up'}}"></i>
-    {{/if}}
+    {{fabulous-order-arrow currentOrder=orderBy headerOrder=header.orderPath orderDirection=orderDirection}}
 </span>
