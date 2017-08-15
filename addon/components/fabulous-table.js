@@ -1,8 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-    classNames: 'fabulous-table',
+    classNameBindings: ['baseClass', 'fixedClass'],
+    baseClass: 'fabulous-table',
     tagName: 'div',
+    
+    fixedClass: Ember.computed('fixedHeader', function() {
+        return this.get('fixedHeader') ? 'fixed-header' : '';
+    }),
     
     isLoading: false,
     offset: 0,
@@ -19,6 +24,33 @@ export default Ember.Component.extend({
         if (this.get('scrollSelector')) {
             this.bindScrollEvent();
         }
+        
+        this.scaleFixedHeaders();
+        this.bindResizeEvent();
+    },
+    
+    /**
+     * Sets width of fixed headers to width of table headers
+     *
+     * @return {undefined}
+     */
+    scaleFixedHeaders() {
+        this.$('.fabulous-fixed-header').each((index, header) => {
+            let target = this.$(header).attr('data-fabulous-header-target');
+            let width = this.$('.fabulous-header-' + target).width();
+            this.$(header).width(width);
+        });
+    },
+    
+    /**
+     * Binds resize event to window
+     *
+     * @return {undefined}
+     */
+    bindResizeEvent() {
+        Ember.$(window).resize(() => {
+            this.scaleFixedHeaders();
+        });
     },
     
     /**
@@ -65,6 +97,7 @@ export default Ember.Component.extend({
             offset: offset
         }, () => {
             this.set('isLoading', false);
+            this.scaleFixedHeaders();
         });
     },
     

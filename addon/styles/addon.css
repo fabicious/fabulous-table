@@ -1,3 +1,11 @@
+.fabulous-table {
+  height: 200px;
+}
+
+.fabulous-table.fixed-header {
+  overflow-y: scroll;
+}
+
 .fabulous-table table {
   width: 100%;
 }
@@ -9,6 +17,18 @@
 
 .fabulous-table .fabulous-header .sortable {
   cursor: pointer;
+}
+
+.fabulous-table .fabulous-fixed-headers {
+  position: absolute;
+  top: 0;
+  border-bottom: 2px solid #818a91;
+  background-color: white;
+}
+
+.fabulous-table .fabulous-fixed-header {
+  display: inline-block;
+  padding: 10px 4px;
 }
 
 .fabulous-table .label {

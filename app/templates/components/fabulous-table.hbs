@@ -1,15 +1,12 @@
 <table>
     <thead class="fabulous-headers">
         <tr>
-            {{#each headers as |header|}}
-                <th class="fabulous-header {{header.headerClass}} {{if header.orderPath 'sortable' '' }}" {{action 'orderBy' header.orderPath}}>
-                    <span class="label">
-                        {{header.label}}
-
-                        {{#if (eq orderBy header.orderPath)}}
-                            <i class="icon ion-ios-arrow-{{if (eq orderDirection 'asc') 'down' 'up'}}"></i>
-                        {{/if}}
-                    </span>
+            {{#each headers as |header index|}}
+                <th class="fabulous-header fabulous-header-{{index}}
+                    {{header.headerClass}}
+                    {{if header.orderPath 'sortable' '' }}"
+                    {{action 'orderBy' header.orderPath}}>
+                    {{fabulous-header-content header=header orderBy=orderBy orderDirection=orderDirection}}
                 </th>
             {{/each}}
         </tr>
@@ -23,3 +20,14 @@
         {{/each}}
     </tbody>
 </table>
+
+<div class="fabulous-fixed-headers">
+    <!-- this format prevents the inline-block-gap-"bug" -->
+    {{#each headers as |header index|}}<span
+            class="fabulous-fixed-header {{header.headerClass}}
+                {{if header.orderPath 'sortable' '' }}"
+        {{action 'orderBy' header.orderPath}}
+            data-fabulous-header-target="{{index}}">
+        {{fabulous-header-content header=header orderBy=orderBy orderDirection=orderDirection}}
+    </span>{{/each}}
+</div>
