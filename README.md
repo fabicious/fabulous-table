@@ -22,6 +22,7 @@ this component.
   modelName='user'
   limit=50
   rowAction=(action 'navigateToUser')
+  fixedHeader=true
   model=users as |item|}}
     {{#fabulous-cell cellClass='col-2'}}
         {{profile-photo value=item.photo}}
@@ -45,6 +46,7 @@ sortable.
 * `limit` specifies the maximum amount of items for the initial rendering. Also this enables endless scrolling: This
 amount is fetched if you scrolled to bottom.
 * `rowAction` is the action which is called on a click on a row.
+* `fixedHeader` fixes the header at the top of the table if the table itself will scroll
 * `model` contain the records.
 * `cellClass` adds a CSS class to each cell of this column.
 
