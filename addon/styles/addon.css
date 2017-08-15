@@ -1,7 +1,3 @@
-.fabulous-table {
-  height: 200px;
-}
-
 .fabulous-table.fixed-header {
   overflow-y: scroll;
 }
