@@ -4,3 +4,4 @@
 yarn.lock
 /tmp
 /tests/dummy/node_modules
+/dist
