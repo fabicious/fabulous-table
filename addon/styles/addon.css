@@ -65,3 +65,17 @@
   padding: 20px 4px;
   font-size: 14px;
 }
+
+.fabulous-table .spinner {
+  text-align: center;
+}
+
+.fabulous-table .spinner .ion-load-c {
+  -webkit-animation: rotate 1s linear infinite;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  font-size: 40px;
+}
+
+@-webkit-keyframes spin{ to{-webkit-transform: rotate(360deg); } }
+@keyframes         spin{ to{        transform: rotate(360deg); } }

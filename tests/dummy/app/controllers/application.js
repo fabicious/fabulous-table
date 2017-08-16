@@ -32,7 +32,7 @@ export default Ember.Controller.extend({
         },
     
         showUserName(user) {
-            alert(user.firstname + ' ' + user.surname);
+            alert(user.firstname + ' "' + user.nickname + '" ' + user.surname);
         }
     }
 });
