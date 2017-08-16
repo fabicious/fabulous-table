@@ -21,9 +21,11 @@
     </tbody>
 </table>
 
-<div class="spinner">
-    <i class="icon ion-load-c"></i>
-</div>
+{{#unless noSpinner}}
+    <div class="spinner">
+        <i class="icon ion-load-c"></i>
+    </div>
+{{/unless}}
 
 <div class="fabulous-fixed-headers">
     <!-- this format prevents the inline-block-gap-"bug" -->

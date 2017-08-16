@@ -74,7 +74,8 @@ export default Ember.Component.extend({
     isScrolledToBottom() {
         let scrollContainerHeight = this.get('scrollContainer').outerHeight();
         let topOffsetOfScrollContainer = this.get('scrollContainer').offset().top;
-        let topOffsetOfLastItem = this.$('.spinner').last().offset().top;
+        let bottomSelector = this.get('noSpinner') ? '.fabulous-row' : '.spinner';
+        let topOffsetOfLastItem = this.$(bottomSelector).last().offset().top;
         
         return topOffsetOfLastItem - topOffsetOfScrollContainer <= scrollContainerHeight;
     },
