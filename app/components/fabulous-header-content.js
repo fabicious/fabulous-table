@@ -1,0 +1,1 @@
+export { default } from 'fabulous-table/components/fabulous-header-content';
