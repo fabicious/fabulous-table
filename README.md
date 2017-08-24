@@ -2,6 +2,9 @@
 
 This is a component supporting table component for ember apps. It features sorting and endless scrolling.
 
+[![npm version](https://badge.fury.io/js/fabulous-table.svg)](https://badge.fury.io/js/fabulous-table)
+[![Download Total](https://img.shields.io/npm/dt/fabulous-table.svg)](http://badge.fury.io/js/fabulous-table)
+
 The usage may look a little complicated. This is because you can use any template code you would normally use outside of
 this component.
 
