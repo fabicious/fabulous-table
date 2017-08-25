@@ -28,13 +28,13 @@ this component. You even could use another fabulous table inside a cell of your 
   fixedHeader=true
   noSpinner=true
   model=users as |item|}}
-    {{#fabulous-cell cellClass='col-2'}}
+    {{#fabulous-cell cellClass='user-image'}}
         {{profile-photo value=item.photo}}
     {{/fabulous-cell}}
-    {{#fabulous-cell cellClass='col-5'}}
+    {{#fabulous-cell}}
         {{item.surname}}
     {{/fabulous-cell}}
-    {{#fabulous-cell cellClass='col-5'}}
+    {{#fabulous-cell}}
         {{item.firstname}}
     {{/fabulous-cell}}
 {{/fabulous-table}}
