@@ -16,9 +16,9 @@ this component.
 
 ```handlebars
 {{#fabulous-table headers=(array
-    (my-hash label='' headerClass='col-2')
-    (my-hash label='Surname' headerClass='col-5' orderPath='surname')
-    (my-hash label='Firstname' headerClass='col-5' orderPath='firstname')
+    (hash label='' headerClass='col-2')
+    (hash label='Surname' headerClass='col-5' orderPath='surname')
+    (hash label='Firstname' headerClass='col-5' orderPath='firstname')
 ) orderBy=orderBy
   orderDirection=orderDirection
   changedOrder=(action 'findUsers')
