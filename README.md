@@ -6,7 +6,7 @@ This is a component supporting table component for ember apps. It features sorti
 [![Download Total](https://img.shields.io/npm/dt/fabulous-table.svg)](http://badge.fury.io/js/fabulous-table)
 
 The usage may look a little complicated. This is because you can use any template code you would normally use outside of
-this component.
+this component. You even could use another fabulous table inside a cell of your first usage of fabulous table.
 
 ## Installation
 
