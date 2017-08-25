@@ -16,9 +16,9 @@ this component. You even could use another fabulous table inside a cell of your 
 
 ```handlebars
 {{#fabulous-table headers=(array
-    (hash label='' headerClass='col-2')
-    (hash label='Surname' headerClass='col-5' orderPath='surname')
-    (hash label='Firstname' headerClass='col-5' orderPath='firstname')
+    (hash label='' headerClass='user-image-header')
+    (hash label='Surname' orderPath='surname')
+    (hash label='Firstname' orderPath='firstname')
 ) orderBy=orderBy
   orderDirection=orderDirection
   changedOrder=(action 'findUsers')
