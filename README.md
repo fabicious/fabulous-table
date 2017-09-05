@@ -10,7 +10,7 @@ this component. You even could use another fabulous table inside a cell of your 
 
 ## Installation
 
-* `npm install fabulous-table`
+`npm install fabulous-table`
 
 ## Usage
 
