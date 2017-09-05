@@ -26,14 +26,3 @@
         <i class="icon ion-load-c"></i>
     </div>
 {{/unless}}
-
-<div class="fabulous-fixed-headers">
-    <!-- this format prevents the inline-block-gap-"bug" -->
-    {{#each headers as |header index|}}<span
-            class="fabulous-fixed-header {{header.headerClass}}
-                {{if header.orderPath 'sortable' '' }}"
-        {{action 'orderBy' header.orderPath}}
-            data-fabulous-header-target="{{index}}">
-        {{fabulous-header-content header=header orderBy=orderBy orderDirection=orderDirection}}
-    </span>{{/each}}
-</div>

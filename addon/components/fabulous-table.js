@@ -25,32 +25,24 @@ export default Ember.Component.extend({
             this.bindScrollEvent();
         }
         
-        this.scaleFixedHeaders();
-        this.bindResizeEvent();
+        if (this.get('fixedHeader')) {
+            this.duplicateTable();
+        }
     },
     
     /**
-     * Sets width of fixed headers to width of table headers
+     * Duplicates the table, put it in a container and insert that after the original table.
      *
      * @return {undefined}
      */
-    scaleFixedHeaders() {
-        this.$('.fabulous-fixed-header').each((index, header) => {
-            let target = this.$(header).attr('data-fabulous-header-target');
-            let width = this.$('.fabulous-header-' + target).width();
-            this.$(header).width(width);
-        });
-    },
-    
-    /**
-     * Binds resize event to window
-     *
-     * @return {undefined}
-     */
-    bindResizeEvent() {
-        Ember.$(window).resize(() => {
-            this.scaleFixedHeaders();
-        });
+    duplicateTable() {
+        let original = this.$('table');
+        let duplicate = original.clone();
+        let container = $('<div></div>');
+        
+        container.toggleClass('fabulous-duplicate', true);
+        container.append(duplicate);
+        container.insertAfter(original);
     },
     
     /**
