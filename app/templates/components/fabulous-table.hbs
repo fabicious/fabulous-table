@@ -1,28 +1,30 @@
-<table>
-    <thead class="fabulous-headers">
-        <tr>
-            {{#each headers as |header index|}}
-                <th class="fabulous-header fabulous-header-{{index}}
-                    {{header.headerClass}}
-                    {{if header.orderPath 'sortable' '' }}"
-                    {{action 'orderBy' header.orderPath}}>
-                    {{fabulous-header-content header=header orderBy=orderBy orderDirection=orderDirection}}
-                </th>
-            {{/each}}
-        </tr>
-    </thead>
-
-    <tbody>
-        {{#each sortedModel as |item|}}
-            <tr class="fabulous-row" {{action 'rowClicked' item}}>
-                {{yield item}}
+<div class="fabulous-scrollable">
+    <table>
+        <thead class="fabulous-headers">
+            <tr>
+                {{#each headers as |header index|}}
+                    <th class="fabulous-header fabulous-header-{{index}}
+                        {{header.headerClass}}
+                        {{if header.orderPath 'sortable' '' }}"
+                        {{action 'orderBy' header.orderPath}}>
+                        {{fabulous-header-content header=header orderBy=orderBy orderDirection=orderDirection}}
+                    </th>
+                {{/each}}
             </tr>
-        {{/each}}
-    </tbody>
-</table>
+        </thead>
 
-{{#unless noSpinner}}
-    <div class="spinner">
-        <i class="icon ion-load-c"></i>
-    </div>
-{{/unless}}
+        <tbody>
+            {{#each sortedModel as |item|}}
+                <tr class="fabulous-row" {{action 'rowClicked' item}}>
+                    {{yield item}}
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    {{#unless noSpinner}}
+        <div class="spinner">
+            <i class="icon ion-load-c"></i>
+        </div>
+    {{/unless}}
+</div>

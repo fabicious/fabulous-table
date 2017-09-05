@@ -31,7 +31,7 @@ export default Ember.Component.extend({
     },
     
     /**
-     * Duplicates the table, put it in a container and insert that after the original table.
+     * Duplicates the table, put it in a container and insert that after the scrollable content.
      *
      * @return {undefined}
      */
@@ -42,7 +42,7 @@ export default Ember.Component.extend({
         
         container.toggleClass('fabulous-duplicate', true);
         container.append(duplicate);
-        container.insertAfter(original);
+        container.insertAfter('.fabulous-scrollable');
     },
     
     /**
