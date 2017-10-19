@@ -16,6 +16,10 @@ export default Ember.Component.extend({
         return [`${this.get('orderBy')}:${this.get('orderDirection')}`];
     }),
     sortedModel: Ember.computed.sort('model', 'sortDefinition'),
+    
+    /**
+     * Element which acts as infinit scroll container
+     */
     scrollContainer: Ember.computed('scrollSelector', function() {
         return Ember.$(this.get('scrollSelector'));
     }),
