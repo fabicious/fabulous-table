@@ -20,6 +20,10 @@ export default Ember.Component.extend({
         return Ember.$(this.get('scrollSelector'));
     }),
     
+    
+    /**
+     * Hook which gets call when the component is rendered successfully.
+     */
     didRender() {
         if (this.get('scrollSelector')) {
             this.bindScrollEvent();
