@@ -5,6 +5,10 @@ export default Ember.Component.extend({
     classNameBindings: ['fixedClass'],
     tagName: 'div',
     
+    /**
+     * Computed property which sets the 'fixed-header' class.
+     * @returns 'fixed-header' if this.get('fixedHeader') is set.
+     */
     fixedClass: Ember.computed('fixedHeader', function() {
         return this.get('fixedHeader') ? 'fixed-header' : '';
     }),
