@@ -18,7 +18,7 @@ export default Ember.Component.extend({
     sortedModel: Ember.computed.sort('model', 'sortDefinition'),
     
     /**
-     * Element which acts as infinit scroll container
+     * Element which acts as infinite scroll container
      */
     scrollContainer: Ember.computed('scrollSelector', function() {
         return Ember.$(this.get('scrollSelector'));
