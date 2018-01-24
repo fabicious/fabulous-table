@@ -28,3 +28,30 @@
         </div>
     {{/unless}}
 </div>
+
+{{#if fixedHeader}}
+    <div class="fabulous-duplicate">
+        <table>
+            <thead class="fabulous-headers">
+            <tr>
+                {{#each headers as |header index|}}
+                    <th class="fabulous-header fabulous-header-{{index}}
+                        {{header.headerClass}}
+                        {{if header.orderPath 'sortable' '' }}"
+                        {{action 'orderBy' header.orderPath}}>
+                        {{fabulous-header-content header=header orderBy=orderBy orderDirection=orderDirection}}
+                    </th>
+                {{/each}}
+            </tr>
+            </thead>
+
+            <tbody>
+            {{#each sortedModel as |item|}}
+                <tr class="fabulous-row" {{action 'rowClicked' item}}>
+                    {{yield item}}
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+{{/if}}

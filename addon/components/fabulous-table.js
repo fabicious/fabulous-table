@@ -36,25 +36,6 @@ export default Ember.Component.extend({
         if (this.get('scrollSelector')) {
             this.bindScrollEvent();
         }
-        
-        if (this.get('fixedHeader')) {
-            this.duplicateTable();
-        }
-    },
-    
-    /**
-     * Duplicates the table, put it in a container and insert that after the scrollable content.
-     *
-     * @return {undefined}
-     */
-    duplicateTable() {
-        let original = this.$('table');
-        let duplicate = original.clone();
-        let container = $('<div></div>');
-        
-        container.toggleClass('fabulous-duplicate', true);
-        container.append(duplicate);
-        container.insertAfter('.fabulous-scrollable');
     },
     
     /**
