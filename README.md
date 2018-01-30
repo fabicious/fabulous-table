@@ -19,6 +19,7 @@ this component. You even could use another fabulous table inside a cell of your 
     (hash label='' headerClass='user-image-header')
     (hash label='Surname' orderPath='surname')
     (hash label='Firstname' orderPath='firstname')
+    (hash label='')
 ) orderBy=orderBy
   orderDirection=orderDirection
   changedOrder=(action 'findUsers')
@@ -37,6 +38,9 @@ this component. You even could use another fabulous table inside a cell of your 
     {{#fabulous-cell}}
         {{item.firstname}}
     {{/fabulous-cell}}
+    {{#fabulous-cell preventPropagation=true}}
+        <button {{action 'clickedButton'}}>Click me</button>
+    {{/fabulous-cell}}
 {{/fabulous-table}}
 ```
 
@@ -45,7 +49,7 @@ this component. You even could use another fabulous table inside a cell of your 
 sortable. (String)
 * `orderBy` specifies the default key by which the table will be sorted on rendering. (String)
 * `orderDirection` specifies the default direction for the sorting on rendering. (String)
-* `changeOrder` is the action which is called on a click on a header. ('asc' or 'desc')
+* `changeOrder` is the action which is called on a click on a header. (`'asc'` or `'desc'`)
 * `modelName` is the ember model's name of the records. (String)
 * `limit` specifies the maximum amount of items for the initial rendering. Also this enables endless scrolling: This
 amount is fetched if you scrolled to bottom. (Number)
@@ -54,6 +58,7 @@ amount is fetched if you scrolled to bottom. (Number)
 * `noSpinner` Hides the spinner at the bottom of the page (`true` or `false`)
 * `model` contain the records. (Object)
 * `cellClass` adds a CSS class to each cell of this column. (String)
+* `preventPropagation` stops propagation if the click event of that cell. (`true` or `false`)
 
 As you can see the headers are separated from the cells. You can use a different `orderPath` as you use in the cell.
 
