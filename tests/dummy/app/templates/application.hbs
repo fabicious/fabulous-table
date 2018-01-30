@@ -1,6 +1,7 @@
 {{#fabulous-table headers=(array
         (hash label='Firstname' orderPath='firstname')
         (hash label='Surname' orderPath='surname')
+        (hash label='')
 ) orderBy='firstname'
   orderDirection='asc'
   changedOrder=(action 'findUsers')
@@ -15,6 +16,9 @@
     {{/fabulous-cell}}
     {{#fabulous-cell}}
         {{item.surname}}
+    {{/fabulous-cell}}
+    {{#fabulous-cell preventPropagation=true}}
+        <button {{action 'clickedButton'}}>Click me</button>
     {{/fabulous-cell}}
 {{/fabulous-table}}
 
