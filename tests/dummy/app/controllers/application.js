@@ -33,6 +33,10 @@ export default Ember.Controller.extend({
     
         showUserName(user) {
             console.log(user.firstname + ' "' + user.nickname + '" ' + user.surname);
+        },
+
+        clickedButton() {
+            console.log('Thank you');
         }
     }
 });
