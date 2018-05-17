@@ -83,7 +83,6 @@ export default Ember.Component.extend({
             offset: offset
         }, () => {
             this.set('isLoading', false);
-            this.scaleFixedHeaders();
         });
     },
     
