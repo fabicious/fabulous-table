@@ -95,7 +95,7 @@ export default Ember.Component.extend({
          * @return {undefined}
          */
         rowClicked(item) {
-            this.sendAction('rowAction', item);
+            this.rowAction(item);
         },
         
         /**
@@ -121,7 +121,7 @@ export default Ember.Component.extend({
             
             this.set('offset', 0);
             
-            this.sendAction('changedOrder', this.get('modelName'), {
+            this.changedOrder(this.get('modelName'), {
                 sort: sort,
                 limit: this.get('limit'),
                 offset: 0
