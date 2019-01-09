@@ -24,7 +24,7 @@
     "ember-cli-htmlbars": "^3.0.1"
   },
   "devDependencies": {
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.0",
     "broccoli-asset-rev": "^3.0.0",
     "ember-ajax": "^4.0.2",
     "ember-array-helper": "^5.0.0",
