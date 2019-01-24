@@ -96,7 +96,7 @@ export default Ember.Component.extend({
          * @return {undefined}
          */
         rowClicked(item) {
-            this.rowAction(item);
+            this.rowAction && this.rowAction(item);
         },
         
         /**
