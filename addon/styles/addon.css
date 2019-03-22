@@ -66,6 +66,11 @@
 
 .fabulous-table .spinner {
   text-align: center;
+  opacity: 0;
+}
+
+.fabulous-table .spinner.loading {
+  opacity: 1;
 }
 
 .fabulous-table .spinner .ion-load-c {

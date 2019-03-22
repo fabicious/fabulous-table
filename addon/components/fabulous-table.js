@@ -28,8 +28,7 @@ export default Ember.Component.extend({
     scrollContainer: Ember.computed('scrollSelector', function() {
         return Ember.$(this.get('scrollSelector'));
     }),
-    
-    
+
     /**
      * Hook which gets call when the component is rendered successfully.
      */

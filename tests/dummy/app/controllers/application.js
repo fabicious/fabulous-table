@@ -37,6 +37,12 @@ export default Ember.Controller.extend({
 
         clickedButton() {
             console.log('Thank you');
+        },
+
+        loadUsers(modelName, sorting, done) {
+            setTimeout(() => {
+                done();
+            }, 1000);
         }
     }
 });

@@ -21,9 +21,8 @@
             {{/each}}
         </tbody>
     </table>
-
     {{#unless noSpinner}}
-        <div class="spinner">
+        <div class="spinner {{if isLoading 'loading' ''}}">
             <i class="icon ion-load-c"></i>
         </div>
     {{/unless}}

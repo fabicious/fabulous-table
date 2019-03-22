@@ -8,7 +8,8 @@
   modelName='user'
   rowAction=(action 'showUserName')
   fixedHeader=true
-  scrollSelector='.fabulous-table'
+  scrollSelector='.fabulous-scrollable'
+  scrolledToBottom=(action 'loadUsers')
   noSpinner=false
   model=users as |item|}}
     {{#fabulous-cell}}
