@@ -64,3 +64,14 @@ As you can see the headers are separated from the cells. You can use a different
 
 The table provides the normal table layout (it uses ``table`` tags inside) but you can add layout classes like bootstrap
 or whatever you are using.
+
+## Contribution
+
+To serve the dummy app run `ember serve`.
+
+If you've changed something in the addon and want to see those changes in the dummy app you have to link the addon.
+
+```
+yarn link
+cd tests/dummy && yarn link fabulous-table
+``` 
