@@ -48,10 +48,13 @@
 }
 
 .fabulous-table .fabulous-row {
-  cursor: pointer;
   border-bottom: 1px solid #eceeef;
   transition: box-shadow .2s;
   transition-timing-function: ease-in;
+}
+
+.fabulous-table.with-row-action .fabulous-row {
+  cursor: pointer;
 }
 
 .fabulous-table .fabulous-row:hover {

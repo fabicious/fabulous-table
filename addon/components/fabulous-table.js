@@ -3,7 +3,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
     classNames: 'fabulous-table',
-    classNameBindings: ['fixedClass'],
+    classNameBindings: ['fixedClass', 'withRowAction'],
     tagName: 'div',
     
     /**
@@ -12,6 +12,14 @@ export default Ember.Component.extend({
      */
     fixedClass: Ember.computed('fixedHeader', function() {
         return this.get('fixedHeader') ? 'fixed-header' : '';
+    }),
+
+    /**
+     * Computed property which sets the 'with-row-action' class.
+     * @returns 'with-row' if this.get('rowAction') is set.
+     */
+    withRowAction: Ember.computed('withRowAction', function() {
+        return this.get('rowAction') ? 'with-row-action' : '';
     }),
     
     isLoading: false,
